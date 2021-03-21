@@ -5,17 +5,17 @@ import nltk.data
 import pandas as pd
 
 # Set values for various parameters. We may wanna tune these
-NUM_FEATURES = 100    # Word vector dimensionality
 MIN_WORD_COUNT = 40   # Minimum word count
 NUM_WORKERS = 4       # Number of threads to run in parallel
-CONTEXT = 5          # Context window size
 DOWNSAMPLING = 1e-3   # Downsample setting for frequent words
 
-def generate_word2vec(model_name, dataset_list):
+def generate_word2vec(model_name, dataset_list, NUM_FEATURES, CONTEXT):
 
     sentences = [] 
 
-    nltk.download()
+    # Uncomment this for the first run
+    # nltk.download()
+
     tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
     for i, dataset in enumerate(dataset_list):
