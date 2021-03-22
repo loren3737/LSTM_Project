@@ -12,6 +12,8 @@ import logging
 import pandas as pd
 from KaggleVectorize import getAvgFeatureVecs, getCleanReviews, getDocFeatureVec
 
+# Check this in
+
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',\
     level=logging.INFO)
 
